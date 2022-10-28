@@ -55,3 +55,56 @@ html{
     animation: look 8s infinite;
 }
 
+.spider .legs{
+    position: absolute;
+    bottom:-10%;
+    z-index: -1;
+}
+
+.spider .legs .leg{
+    width: 80px;
+    height: 40px;
+    margin-top: -20px;
+    border: 5px solid transparent;
+    border-top-color:#000; /*  définit la couleur utilisée pour la bordure haute d'un élément. */
+    border-radius: 40px 40px 0 0;
+}
+
+/* pattes de l'araigniée mise en forme */
+.spider .legs.left{
+    left:-70%;
+}
+
+.spider .legs.right{
+    right:-60%;
+}
+
+.legs.left .leg:nth-child(1){
+    transform: rotate(10deg);
+    margin-left: 10px;
+}
+
+.legs.right .leg:nth-child(1){
+    transform: rotate(-10deg);
+    margin-left: -10px;
+}
+
+.legs.left .leg:nth-child(2){
+    transform: rotate(-20deg);
+    margin-left: 20px;
+}
+
+.legs.right .leg:nth-child(2){
+    transform: rotate(20deg);
+    margin-left: -20px;
+}
+
+.legs.left .leg:nth-child(3){
+    transform: rotate(-50deg);
+    margin-left: 30px;
+}
+
+.legs.right .leg:nth-child(3){
+    transform: rotate(50deg);
+    margin-left: -30px;
+}
