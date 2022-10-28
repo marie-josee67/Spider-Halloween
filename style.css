@@ -2,11 +2,22 @@ html{
     background: #ff785a;
 }
 
+/* remonte le fil de l'araigniée pour la faire disparaitre*/
+html:hover .spider{
+    top:-120%;
+}
+
+/* remonte le fil de l'araigniée */
+html:hover .spider1{
+    top:-120px;
+}
+
 .spiderweb{
     background: #fff;
     width: 2px;
     height: 200px;
     margin-left: 49px;
+    transition:1s ease-in-out;
 }
 
 .spider{
@@ -107,4 +118,120 @@ html{
 .legs.right .leg:nth-child(3){
     transform: rotate(50deg);
     margin-left: -30px;
+}
+
+/* animation araigniée */
+@keyframes look {
+    0%, 40%, 100%{
+        transform: translateX(0);
+    }
+    45%, 95%{
+        transform: translateX(-110%);
+    }
+}
+
+@keyframes swing {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+/* ***************************************** deuxième araigniée ********************************** */
+
+.spiderweb1{
+    background: #fff;
+    width: 2px;
+    height: 200px;
+    margin-left: 49px;
+    transition:1s ease-in-out;
+}
+
+.spider1{
+    position: absolute;
+    display: inline-block;
+    top:0;
+    right:30%;
+    animation:swing 2s infinite;
+    transform-origin:top;
+}
+/* corp de l'araignier */
+.spider1 .body{
+    width: 100px;
+    height: 80px;
+    background: #000;
+    position: relative;
+    border-radius: 50%;
+}
+/* yeux  blanc de l'araigniée */
+.spider1 .body .eye{
+    width: 33px;
+    height: 33px;
+    background: #fff;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
+}
+
+.spider1 .eye.right{
+    right: 15px;
+}
+
+.spider1 .eye.left{
+    left: 15px;
+}
+
+/* yeux  noir de l'araigniée */
+.spider1 .eye::after{
+    background: rgb(120, 12, 12);
+    width: 8px;
+    height: 8px;
+    content: "";
+    display: block;
+    margin: 55%;
+    border-radius: 50%;
+    animation: look 8s infinite;
+}
+
+.spider1 .legs{
+    position: absolute;
+    bottom:-10%;
+    z-index: -1;
+}
+
+.spider1 .legs .leg{
+    width: 80px;
+    height: 40px;
+    margin-top: -20px;
+    border: 5px solid transparent;
+    border-top-color:#000; /*  définit la couleur utilisée pour la bordure haute d'un élément. */
+    border-radius: 40px 40px 0 0;
+}
+
+/* pattes de l'araigniée mise en forme */
+.spider1 .legs.left{
+    left:-70%;
+}
+
+.spider1 .legs.right{
+    right:-60%;
+}
+
+/* ***************************************** texte ********************************** */
+
+.texte{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.texte p{
+    font-size:90px;
+    color: rgb(159, 16, 16);
+    font-weight: 900;
 }
