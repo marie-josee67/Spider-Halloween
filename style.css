@@ -17,11 +17,41 @@ html{
     animation:swing 2s infinite;
     transform-origin:top;
 }
-
+/* corp de l'araignier */
 .spider .body{
     width: 100px;
     height: 80px;
     background: #000;
-    position:relative;
+    position: relative;
     border-radius: 50%;
 }
+/* yeux  blanc de l'araigniée */
+.spider .body .eye{
+    width: 33px;
+    height: 33px;
+    background: #fff;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
+}
+
+.spider .eye.right{
+    right: 15px;
+}
+
+.spider .eye.left{
+    left: 15px;
+}
+
+/* yeux  noir de l'araigniée */
+.spider .eye::after{
+    background: rgb(17, 153, 19);
+    width: 8px;
+    height: 8px;
+    content: "";
+    display: block;
+    margin: 55%;
+    border-radius: 50%;
+    animation: look 8s infinite;
+}
+
